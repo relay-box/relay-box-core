@@ -15,7 +15,7 @@ export const users = sqliteTable(
             .notNull()
             .default(sql`CURRENT_TIMESTAMP`)
     },
-    table => [uniqueIndex('email_idx').on(table.email)]
+    table => []
 )
 
 export type User = typeof users.$inferSelect
