@@ -1,16 +1,23 @@
 {
     "name": "relay-box-core",
     "scripts": {
+        "db:generate": "drizzle-kit generate",
+        "db:migrate": "drizzle-kit migrate",
         "dev": "bun run --hot src/index.ts",
         "format": "prettier --cache --write ."
     },
     "dependencies": {
+        "better-sqlite3": "^11.10.0",
+        "dotenv": "^16.5.0",
+        "drizzle-orm": "^0.44.2",
         "hono": "^4.7.11"
     },
     "devDependencies": {
         "@types/bun": "latest",
+        "drizzle-kit": "^0.31.1",
         "prettier": "^3.5.3",
         "prettier-plugin-organize-imports": "^4.1.0",
-        "prettier-plugin-packagejson": "^2.5.15"
+        "prettier-plugin-packagejson": "^2.5.15",
+        "tsx": "^4.20.1"
     }
 }
